@@ -1,16 +1,32 @@
+.is-rotateBasic,
+.is-rotateReverse {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.is-rotateBasic {
+  animation-name: rotateBasic;
+}
+
+.is-rotateReverse {
+  animation-name: rotateReverse;
+}
+
+
 @keyframes rotateBasic {
   from {
     transform: rotate(0deg);
   }
 
   to {
-    transform: rotate(359deg);
+    transform: rotate(359.9deg);
   }
 }
 
 @keyframes rotateReverse {
   from {
-    transform: rotate(359deg);
+    transform: rotate(359.9deg);
   }
 
   to {

@@ -7,15 +7,14 @@
   position: absolute;
   left: 25%;
   top: 25%;
-  animation: rotateBasic 5s infinite linear;
   transform-origin: 50% 50%;
 }
 
 .triangle {
   border-right: variables.$baseSize solid transparent;
   border-left: variables.$baseSize solid transparent;
+  // border-right: variables.$baseSize solid #fff;
+  // border-left: variables.$baseSize solid #fff;
   border-bottom: calc(variables.$baseSize * variables.$rootThree) solid color.$itemColorRightGreen;
-  /* 底辺かける ルート３（variables.$rootThree）*/
-  margin-top: calc(variables.$baseSize - variables.$baseSize * 0.5 * variables.$rootThree - 20px);
-  /* 最後の２０pxはまじめに産出しよう */
+  margin-top: calc(2px - 1 * variables.$baseSize + variables.$baseSize * 0.5 * variables.$rootThree);
 }
