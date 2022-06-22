@@ -1,0 +1,19 @@
+@keyframes rotateBasic {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotateReverse {
+  from {
+    transform: rotate(359deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}

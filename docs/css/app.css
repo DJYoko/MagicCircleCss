@@ -15,6 +15,39 @@ body {
   overflow: hidden;
 }
 
+@-webkit-keyframes rotateBasic {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotateBasic {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes rotateReverse {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotateReverse {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
 .ring {
   width: 100%;
   height: 100%;
@@ -34,8 +67,8 @@ body {
 .ring-innerTextList {
   width: 100%;
   height: 100%;
-  -webkit-animation: rotationReverse 3s infinite linear;
-          animation: rotationReverse 3s infinite linear;
+  -webkit-animation: rotateReverse 3s infinite linear;
+          animation: rotateReverse 3s infinite linear;
 }
 
 .ring-innerTextItem {
@@ -78,8 +111,8 @@ body {
   position: absolute;
   left: 25%;
   top: 25%;
-  -webkit-animation: rotation 5s infinite linear;
-          animation: rotation 5s infinite linear;
+  -webkit-animation: rotateBasic 5s infinite linear;
+          animation: rotateBasic 5s infinite linear;
   transform-origin: 50% 50%;
 }
 
@@ -109,38 +142,4 @@ body {
   margin-left: -1px;
   background: #f00;
   z-index: 10000;
-}
-
-@-webkit-keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-@-webkit-keyframes rotationReverse {
-  from {
-    transform: rotate(359deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-@keyframes rotationReverse {
-  from {
-    transform: rotate(359deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
 }

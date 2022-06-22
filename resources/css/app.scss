@@ -2,6 +2,7 @@
 @use './foundations/base';
 @use './foundations/variables';
 @use './foundations/color';
+@use './foundations/animations';
 @use './components/ring';
 @use './components/triangle';
 
@@ -22,25 +23,4 @@
   margin-left: -1px;
   background: #f00;
   z-index: 10000;
-}
-
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(359deg);
-  }
-}
-
-@keyframes rotationReverse {
-  from {
-    transform: rotate(359deg);
-  }
-
-  to {
-    transform: rotate(0deg);
-  }
 }
