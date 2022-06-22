@@ -1,14 +1,14 @@
 @charset "utf-8";
 @use './foundations/base';
 @use './foundations/variables';
+@use './foundations/color';
 @use './components/ring';
 @use './components/triangle';
 
 .magicCircle {
-  width: 320px;
-  height: 320px;
+  width: calc(variables.$baseSize * 4);
+  height: calc(variables.$baseSize * 4);
   margin: auto;
-  border: 1px solid #fff;
   position: relative;
 }
 

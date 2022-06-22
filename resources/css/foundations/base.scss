@@ -1,10 +1,15 @@
+@use '../foundations/variables';
+@use '../foundations/color';
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: #222;
-  padding-top: 200px;
-  color: #fff;
+  background: color.$bodyBackground;
+  padding-top: calc(variables.$baseSize * 0.1);
+  color: color.$baseWhite;
   user-select: none;
+  text-align: center;
+  overflow: hidden;
 }

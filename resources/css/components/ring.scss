@@ -1,3 +1,6 @@
+@use '../foundations/variables';
+@use '../foundations/color';
+
 .ring {
   width: 100%;
   height: 100%;
@@ -9,7 +12,7 @@
 .ring-border {
   width: 100%;
   height: 100%;
-  border: 4px solid #b2ce54;
+  border: 4px solid color.$itemColorRightGreen;
   border-radius: 100%;
   position: relative;
 }
@@ -23,11 +26,11 @@
 .ring-innerTextItem {
   position: absolute;
   top: 0;
-  left: calc(50% - 10px);
-  width: 20px;
+  left: calc(50% - variables.$baseSize * 0.3 * 0.5);
+  width: calc(variables.$baseSize * 0.3);
+  font-size: calc(variables.$baseSize * 0.3);
   height: 100%;
-  text-align: left;
-  color: #fff;
+  color: color.$baseWhite;
 }
 
 .ring-innerTextItem:nth-child(1) {

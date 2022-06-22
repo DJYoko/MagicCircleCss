@@ -1,19 +1,21 @@
+@use '../foundations/variables';
+@use '../foundations/color';
+
 .triangleWrap {
   width: 50%;
   height: 50%;
   position: absolute;
   left: 25%;
   top: 25%;
-
   animation: rotation 5s infinite linear;
   transform-origin: 50% 50%;
 }
 
 .triangle {
-  border-right: 80px solid transparent;
-  border-left: 80px solid transparent;
-  border-bottom: calc(80px * 1.73205080757) solid #b2ce54;
-  /* 底辺かける ルート３（1.73205080757）*/
-  margin-top: calc(80px - 80px * 0.5 * 1.73205080757 - 20px);
+  border-right: variables.$baseSize solid transparent;
+  border-left: variables.$baseSize solid transparent;
+  border-bottom: calc(variables.$baseSize * variables.$rootThree) solid color.$itemColorRightGreen;
+  /* 底辺かける ルート３（variables.$rootThree）*/
+  margin-top: calc(variables.$baseSize - variables.$baseSize * 0.5 * variables.$rootThree - 20px);
   /* 最後の２０pxはまじめに産出しよう */
 }

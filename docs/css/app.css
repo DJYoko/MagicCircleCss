@@ -4,13 +4,15 @@
 }
 
 body {
-  background: #222;
-  padding-top: 200px;
-  color: #fff;
+  background: #111111;
+  padding-top: 16px;
+  color: #f1f1f1;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  text-align: center;
+  overflow: hidden;
 }
 
 .ring {
@@ -39,11 +41,11 @@ body {
 .ring-innerTextItem {
   position: absolute;
   top: 0;
-  left: calc(50% - 10px);
-  width: 20px;
+  left: calc(50% - 24px);
+  width: 48px;
+  font-size: 48px;
   height: 100%;
-  text-align: left;
-  color: #fff;
+  color: #f1f1f1;
 }
 
 .ring-innerTextItem:nth-child(1) {
@@ -82,19 +84,18 @@ body {
 }
 
 .triangle {
-  border-right: 80px solid transparent;
-  border-left: 80px solid transparent;
-  border-bottom: 138.5640646056px solid #b2ce54;
-  /* 底辺かける ルート３（1.73205080757）*/
-  margin-top: -9.2820323028px;
+  border-right: 160px solid transparent;
+  border-left: 160px solid transparent;
+  border-bottom: 277.1281292112px solid #b2ce54;
+  /* 底辺かける ルート３（variables.$rootThree）*/
+  margin-top: 1.4359353944px;
   /* 最後の２０pxはまじめに産出しよう */
 }
 
 .magicCircle {
-  width: 320px;
-  height: 320px;
+  width: 640px;
+  height: 640px;
   margin: auto;
-  border: 1px solid #fff;
   position: relative;
 }
 
