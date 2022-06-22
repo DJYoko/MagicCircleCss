@@ -13,46 +13,6 @@ body {
           user-select: none;
 }
 
-.magicCircle {
-  width: 320px;
-  height: 320px;
-  margin: auto;
-  border: 1px solid #fff;
-  position: relative;
-}
-
-.triangleWrap {
-  width: 50%;
-  height: 50%;
-  position: absolute;
-  left: 25%;
-  top: 25%;
-  -webkit-animation: rotation 5s infinite linear;
-          animation: rotation 5s infinite linear;
-  transform-origin: 50% 50%;
-}
-
-.triangle {
-  border-right: 80px solid transparent;
-  border-left: 80px solid transparent;
-  border-bottom: 138.5640646056px solid #b2ce54;
-  /* 底辺かける ルート３（1.73205080757）*/
-  margin-top: -9.2820323028px;
-  /* 最後の２０pxはまじめに産出しよう */
-}
-
-.theCenter {
-  width: 2px;
-  height: 2px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -1px;
-  margin-left: -1px;
-  background: #f00;
-  z-index: 10000;
-}
-
 .ring {
   width: 100%;
   height: 100%;
@@ -84,7 +44,6 @@ body {
   height: 100%;
   text-align: left;
   color: #fff;
-  line-height: 20px;
 }
 
 .ring-innerTextItem:nth-child(1) {
@@ -109,6 +68,46 @@ body {
 
 .ring-innerTextItem:nth-child(6) {
   transform: rotate(300deg);
+}
+
+.triangleWrap {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  -webkit-animation: rotation 5s infinite linear;
+          animation: rotation 5s infinite linear;
+  transform-origin: 50% 50%;
+}
+
+.triangle {
+  border-right: 80px solid transparent;
+  border-left: 80px solid transparent;
+  border-bottom: 138.5640646056px solid #b2ce54;
+  /* 底辺かける ルート３（1.73205080757）*/
+  margin-top: -9.2820323028px;
+  /* 最後の２０pxはまじめに産出しよう */
+}
+
+.magicCircle {
+  width: 320px;
+  height: 320px;
+  margin: auto;
+  border: 1px solid #fff;
+  position: relative;
+}
+
+.theCenter {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+  margin-left: -1px;
+  background: #f00;
+  z-index: 10000;
 }
 
 @-webkit-keyframes rotation {

@@ -1,0 +1,55 @@
+.ring {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ring-border {
+  width: 100%;
+  height: 100%;
+  border: 4px solid #b2ce54;
+  border-radius: 100%;
+  position: relative;
+}
+
+.ring-innerTextList {
+  width: 100%;
+  height: 100%;
+  animation: rotationReverse 3s infinite linear;
+}
+
+.ring-innerTextItem {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 100%;
+  text-align: left;
+  color: #fff;
+}
+
+.ring-innerTextItem:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+.ring-innerTextItem:nth-child(2) {
+  transform: rotate(60deg);
+}
+
+.ring-innerTextItem:nth-child(3) {
+  transform: rotate(120deg);
+}
+
+.ring-innerTextItem:nth-child(4) {
+  transform: rotate(180deg);
+}
+
+.ring-innerTextItem:nth-child(5) {
+  transform: rotate(240deg);
+}
+
+.ring-innerTextItem:nth-child(6) {
+  transform: rotate(300deg);
+}
