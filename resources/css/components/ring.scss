@@ -12,7 +12,8 @@
 .ring-border {
   width: 100%;
   height: 100%;
-  border: 4px solid color.$itemColorRightGreen;
+  border: 2px solid color.$itemColorDeepBlue;
+  box-shadow: 0px 0px 8px color.$itemColorLightBlue, 0px 0px 8px inset color.$itemColorLightBlue;
   border-radius: 100%;
   position: relative;
 }
@@ -29,23 +30,13 @@
   width: calc(variables.$baseSize * 0.3);
   font-size: calc(variables.$baseSize * 0.3);
   height: 100%;
-  color: color.$baseWhite;
+  color: color.$itemColorLightBlue;
 }
 
-// prettier-ignore
 .ring-innerTextItem {
-  // @for $i from 1 through 3 {
-  //   .foo-#{$i} {
-  //     width: 10px * $i;
-  //   }
-  // }
-
   @for $i from 0 through 359 {
     &[style-angle="#{$i}"] {
       transform: rotate(1deg * $i);
     }
   }
-
-
-
 }

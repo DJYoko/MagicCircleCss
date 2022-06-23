@@ -14,6 +14,6 @@
   border-left: variables.$baseSize solid transparent;
   // border-right: variables.$baseSize solid #fff;
   // border-left: variables.$baseSize solid #fff;
-  border-bottom: calc(variables.$baseSize * variables.$rootThree) solid color.$itemColorRightGreen;
+  border-bottom: calc(variables.$baseSize * variables.$rootThree) solid color.$itemColorDeepBlue;
   margin-top: calc(2px - 1 * variables.$baseSize + variables.$baseSize * 0.5 * variables.$rootThree);
 }
