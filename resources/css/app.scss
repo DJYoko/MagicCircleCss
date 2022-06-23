@@ -6,6 +6,7 @@
 @use './foundations/animations';
 @use './components/ring';
 @use './components/triangle';
+@use './components/borderTriangle';
 
 .magicCircle {
   width: calc(variables.$baseSize * 4);

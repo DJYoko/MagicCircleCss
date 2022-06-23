@@ -27,11 +27,23 @@ body {
   left: 10%;
   top: 10%;
 }
+.resizable.is-resize70 {
+  width: 70%;
+  height: 70%;
+  left: 15%;
+  top: 15%;
+}
 .resizable.is-resize60 {
   width: 60%;
   height: 60%;
   left: 20%;
   top: 20%;
+}
+.resizable.is-resize50 {
+  width: 50%;
+  height: 50%;
+  left: 25%;
+  top: 25%;
 }
 .resizable.is-resize40 {
   width: 40%;
@@ -110,7 +122,8 @@ body {
 .ring-border {
   width: 100%;
   height: 100%;
-  border: 4px solid #b2ce54;
+  border: 2px solid #009ECF;
+  box-shadow: 0px 0px 8px #09ECF9, 0px 0px 8px inset #09ECF9;
   border-radius: 100%;
   position: relative;
 }
@@ -127,7 +140,7 @@ body {
   width: 48px;
   font-size: 48px;
   height: 100%;
-  color: #f1f1f1;
+  color: #09ECF9;
 }
 
 .ring-innerTextItem[style-angle="0"] {
@@ -1211,19 +1224,38 @@ body {
   transform: rotate(359deg);
 }
 
-.triangleWrap {
-  width: 50%;
-  height: 50%;
-  position: absolute;
-  left: 25%;
-  top: 25%;
-}
-
 .triangle {
   border-right: 160px solid transparent;
   border-left: 160px solid transparent;
-  border-bottom: 277.1281292112px solid #b2ce54;
+  border-bottom: 277.1281292112px solid #009ECF;
   margin-top: -19.4359353944px;
+}
+
+.borderTriangle {
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #009ECF;
+  position: relative;
+  margin-top: 20.0961894323%;
+}
+.borderTriangle:before, .borderTriangle:after {
+  content: "";
+  background-color: #009ECF;
+  width: 1px;
+  display: block;
+  height: 86.6025403785%;
+  position: absolute;
+  top: 0;
+}
+.borderTriangle:before {
+  left: 0;
+  transform: skew(30deg);
+  transform-origin: 0% 0%;
+}
+.borderTriangle:after {
+  right: 0;
+  transform: skew(-30deg);
+  transform-origin: 0% 0%;
 }
 
 .magicCircle {
