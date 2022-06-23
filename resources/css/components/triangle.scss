@@ -1,15 +1,16 @@
 @use '../foundations/variables';
 @use '../foundations/color';
 
-.triangleWrap {
-  width: 50%;
-  height: 50%;
-  position: absolute;
-  left: 25%;
-  top: 25%;
-}
+// .triangle {
+//   width: 50%;
+//   height: 50%;
+//   position: absolute;
+//   left: 25%;
+//   top: 25%;
+// }
 
 .triangle {
+
   border-right: variables.$baseSize solid transparent;
   border-left: variables.$baseSize solid transparent;
   // border-right: variables.$baseSize solid #fff;
