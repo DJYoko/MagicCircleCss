@@ -32,26 +32,20 @@
   color: color.$baseWhite;
 }
 
-.ring-innerTextItem:nth-child(1) {
-  transform: rotate(0deg);
-}
+// prettier-ignore
+.ring-innerTextItem {
+  // @for $i from 1 through 3 {
+  //   .foo-#{$i} {
+  //     width: 10px * $i;
+  //   }
+  // }
 
-.ring-innerTextItem:nth-child(2) {
-  transform: rotate(60deg);
-}
+  @for $i from 0 through 359 {
+    &[style-angle="#{$i}"] {
+      transform: rotate(1deg * $i);
+    }
+  }
 
-.ring-innerTextItem:nth-child(3) {
-  transform: rotate(120deg);
-}
 
-.ring-innerTextItem:nth-child(4) {
-  transform: rotate(180deg);
-}
 
-.ring-innerTextItem:nth-child(5) {
-  transform: rotate(240deg);
-}
-
-.ring-innerTextItem:nth-child(6) {
-  transform: rotate(300deg);
 }
