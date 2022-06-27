@@ -18,10 +18,10 @@
 .is-down {
   width: 100%;
   height: 100%;
-  border-top: 1px solid color.$itemColorDeepBlue;
+  border-top: 2px solid color.$itemColorDeepBlue;
   position: relative;
   margin-top: calc(75% * 2 - 75% * variables.$rootThree);
-  margin-bottom: 100%;
+
 
   &:before,
   &:after {
@@ -47,4 +47,7 @@
   }
 }
 
-.is-down {}
+.is-down {
+  transform: rotate(180deg);
+  margin-top: -141%;
+}
