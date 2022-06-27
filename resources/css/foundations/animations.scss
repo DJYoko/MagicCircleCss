@@ -1,6 +1,6 @@
 .is-rotateBasic,
 .is-rotateReverse {
-  animation-duration: 6s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -31,5 +31,14 @@
 
   to {
     transform: rotate(0deg);
+  }
+}
+
+.is-rotateBasic,
+.is-rotateReverse {
+  @for $i from 0 through 30 {
+    &[animation-duration="#{$i}"] {
+      animation-duration: ($i * 1s);
+    }
   }
 }
