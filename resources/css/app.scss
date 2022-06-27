@@ -7,6 +7,7 @@
 @use './components/ring';
 @use './components/filledTriangle';
 @use './components/borderTriangle';
+@use './components/hexagon';
 
 .magicCircle {
   width: calc(variables.$baseSize * 4);

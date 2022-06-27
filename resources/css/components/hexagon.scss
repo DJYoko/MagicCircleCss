@@ -14,4 +14,37 @@
 
 .is-up {}
 
+.is-up,
+.is-down {
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid color.$itemColorDeepBlue;
+  position: relative;
+  margin-top: calc(75% * 2 - 75% * variables.$rootThree);
+  margin-bottom: 100%;
+
+  &:before,
+  &:after {
+    content: '';
+    background-color: color.$itemColorDeepBlue;
+    width: 1px;
+    display: block;
+    height: calc(variables.$rootThree / 2 * 100%);
+    position: absolute;
+    top: 0;
+  }
+
+  &:before {
+    left: 0;
+    transform: skew(30deg);
+    transform-origin: 0% 0%;
+  }
+
+  &:after {
+    right: 0;
+    transform: skew(-30deg);
+    transform-origin: 0% 0%;
+  }
+}
+
 .is-down {}
