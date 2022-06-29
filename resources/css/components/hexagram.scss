@@ -1,18 +1,13 @@
 @use '../foundations/variables';
 @use '../foundations/color';
 
-.hexagon {
+.hexagram {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
 }
-
-
-.hexagonTriangle {}
-
-.is-up {}
 
 .is-up,
 .is-down {
