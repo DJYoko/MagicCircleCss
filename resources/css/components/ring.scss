@@ -29,11 +29,13 @@
   left: calc(50% - variables.$baseSize * 0.3 * 0.5);
   width: calc(variables.$baseSize * 0.3);
   font-size: calc(variables.$baseSize * 0.3);
+  line-height: 60px;
 
   @media (max-width: 640px) {
     font-size: calc(variables.$baseSize * 0.15);
     top: -1.5%;
     height: 103%;
+    line-height: 40px;
   }
 
   height: 100%;

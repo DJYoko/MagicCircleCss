@@ -393,6 +393,7 @@ body {
   left: calc(50% - 24px);
   width: 48px;
   font-size: 48px;
+  line-height: 60px;
   height: 100%;
   color: #09ECF9;
 }
@@ -401,6 +402,7 @@ body {
     font-size: 24px;
     top: -1.5%;
     height: 103%;
+    line-height: 40px;
   }
 }
 
