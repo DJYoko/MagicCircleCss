@@ -24,6 +24,9 @@ $ballSize: 32px;
 
   &:before {
     content: '';
+    display: block;
+    border-radius: 1000px;
+
     width: calc($ballSize);
     height: calc($ballSize);
     margin-left: calc(-1 * $ballSize / 2);
@@ -36,11 +39,13 @@ $ballSize: 32px;
     }
 
     box-shadow: 0px 0px 8px color.$itemColorLightBlue;
-
-    display: block;
-    // background-color: color.$itemColorLightBlue;
     background: radial-gradient(color.$itemColorLightBlue, color.$itemColorDeepBlue);
-    border-radius: 1000px;
+
+    #colorMode:checked~.magicCircle & {
+      box-shadow: 0px 0px 8px color.$itemColorLightRed;
+      background: radial-gradient(color.$itemColorLightRed, color.$itemColorDeepRed);
+    }
+
   }
 }
 

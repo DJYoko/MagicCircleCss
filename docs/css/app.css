@@ -376,10 +376,14 @@ body {
 .ring-border {
   width: 100%;
   height: 100%;
-  border: 1px solid #09ECF9;
-  box-shadow: 0px 0px 8px #09ECF9, 0px 0px 8px inset #09ECF9;
   border-radius: 100%;
   position: relative;
+  border: 1px solid #09ECF9;
+  box-shadow: 0px 0px 8px #09ECF9, 0px 0px 8px inset #09ECF9;
+}
+#colorMode:checked ~ .magicCircle .ring-border {
+  border: 1px solid #a94a78;
+  box-shadow: 0px 0px 8px #a94a78, 0px 0px 8px inset #a94a78;
 }
 
 .ring-innerTextList {
@@ -396,6 +400,9 @@ body {
   line-height: 60px;
   height: 100%;
   color: #09ECF9;
+}
+#colorMode:checked ~ .magicCircle .ring-innerTextItem {
+  color: #a94a78;
 }
 @media (max-width: 640px) {
   .ring-innerTextItem {
@@ -1488,18 +1495,24 @@ body {
 }
 
 .filledTriangle {
+  margin-top: -19.4359353944px;
   border-right: 160px solid transparent;
   border-left: 160px solid transparent;
   border-bottom: 277.1281292112px solid #007599;
-  margin-top: -19.4359353944px;
+}
+#colorMode:checked ~ .magicCircle .filledTriangle {
+  border-bottom: 277.1281292112px solid #99004a;
 }
 
 .borderTriangle {
   width: 100%;
   height: 100%;
-  border-top: 1px solid #09ECF9;
   position: relative;
   margin-top: 20.0961894323%;
+  border-top: 1px solid #09ECF9;
+}
+#colorMode:checked ~ .magicCircle .borderTriangle {
+  border-top: 1px solid #a94a78;
 }
 .borderTriangle:before, .borderTriangle:after {
   content: "";
@@ -1509,6 +1522,9 @@ body {
   height: 86.6025403785%;
   position: absolute;
   top: 0;
+}
+#colorMode:checked ~ .magicCircle .borderTriangle:before, #colorMode:checked ~ .magicCircle .borderTriangle:after {
+  background-color: #a94a78;
 }
 .borderTriangle:before {
   left: 0;
@@ -1525,20 +1541,29 @@ body {
 .hexagram .is-down {
   width: 100%;
   height: 100%;
-  border-top: 2px solid #09ECF9;
   position: relative;
   margin-top: 20.0961894323%;
+  border-top: 2px solid #09ECF9;
+}
+#colorMode:checked ~ .magicCircle .hexagram .is-up,
+#colorMode:checked ~ .magicCircle .hexagram .is-down {
+  border-top: 2px solid #a94a78;
 }
 .hexagram .is-up:before, .hexagram .is-up:after,
 .hexagram .is-down:before,
 .hexagram .is-down:after {
   content: "";
-  background-color: #09ECF9;
   width: 1px;
   display: block;
   height: 86.6025403785%;
   position: absolute;
   top: 0;
+  background-color: #09ECF9;
+}
+#colorMode:checked ~ .magicCircle .hexagram .is-up:before, #colorMode:checked ~ .magicCircle .hexagram .is-up:after,
+#colorMode:checked ~ .magicCircle .hexagram .is-down:before,
+#colorMode:checked ~ .magicCircle .hexagram .is-down:after {
+  background-color: #a94a78;
 }
 .hexagram .is-up:before,
 .hexagram .is-down:before {
@@ -1561,9 +1586,13 @@ body {
   height: 50%;
   width: 86.6025403785%;
   margin: 25% auto;
+  position: relative;
   border-left: 1px solid #09ECF9;
   border-right: 1px solid #09ECF9;
-  position: relative;
+}
+#colorMode:checked ~ .magicCircle .hexagon {
+  border-left: 1px solid #a94a78;
+  border-right: 1px solid #a94a78;
 }
 
 .hexagon::before,
@@ -1574,9 +1603,14 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 0;
   border-left: 1px solid #09ECF9;
   border-right: 1px solid #09ECF9;
-  z-index: 0;
+}
+#colorMode:checked ~ .magicCircle .hexagon::before,
+#colorMode:checked ~ .magicCircle .hexagon::after {
+  border-left: 1px solid #a94a78;
+  border-right: 1px solid #a94a78;
 }
 
 .hexagon::before {
@@ -1609,13 +1643,13 @@ body {
 }
 .ball_item:before {
   content: "";
+  display: block;
+  border-radius: 1000px;
   width: 32px;
   height: 32px;
   margin-left: -16px;
   box-shadow: 0px 0px 8px #09ECF9;
-  display: block;
   background: radial-gradient(#09ECF9, #007599);
-  border-radius: 1000px;
 }
 @media (max-width: 640px) {
   .ball_item:before {
@@ -1624,6 +1658,10 @@ body {
     top: -8px;
     margin-left: -8px;
   }
+}
+#colorMode:checked ~ .magicCircle .ball_item:before {
+  box-shadow: 0px 0px 8px #a94a78;
+  background: radial-gradient(#a94a78, #99004a);
 }
 
 .ball_item[style-angle="0"] {

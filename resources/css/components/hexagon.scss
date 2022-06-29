@@ -5,9 +5,15 @@
   height: 50%;
   width: calc(50% * variables.$rootThree);
   margin: 25% auto;
+  position: relative;
   border-left: 1px solid color.$itemColorLightBlue;
   border-right: 1px solid color.$itemColorLightBlue;
-  position: relative;
+
+  #colorMode:checked~.magicCircle & {
+    border-left: 1px solid color.$itemColorLightRed;
+    border-right: 1px solid color.$itemColorLightRed;
+
+  }
 }
 
 .hexagon::before,
@@ -18,9 +24,14 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 0;
   border-left: 1px solid color.$itemColorLightBlue;
   border-right: 1px solid color.$itemColorLightBlue;
-  z-index: 0;
+
+  #colorMode:checked~.magicCircle & {
+    border-left: 1px solid color.$itemColorLightRed;
+    border-right: 1px solid color.$itemColorLightRed;
+  }
 }
 
 .hexagon::before {

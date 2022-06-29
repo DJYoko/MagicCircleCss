@@ -2,8 +2,13 @@
 @use '../foundations/color';
 
 .filledTriangle {
+  margin-top: calc(2px - 1 * variables.$baseSize + variables.$baseSize * 0.5 * variables.$rootThree);
   border-right: variables.$baseSize solid transparent;
   border-left: variables.$baseSize solid transparent;
   border-bottom: calc(variables.$baseSize * variables.$rootThree) solid color.$itemColorDeepBlue;
-  margin-top: calc(2px - 1 * variables.$baseSize + variables.$baseSize * 0.5 * variables.$rootThree);
+
+  #colorMode:checked~.magicCircle & {
+    border-bottom: calc(variables.$baseSize * variables.$rootThree) solid color.$itemColorDeepRed;
+  }
+
 }
