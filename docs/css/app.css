@@ -1661,7 +1661,7 @@ body {
 }
 #colorMode:checked ~ .magicCircle .ball_item:before {
   box-shadow: 0px 0px 8px #a94a78;
-  background: radial-gradient(#a94a78, #99004a);
+  background: radial-gradient(#99004a, #a94a78);
 }
 
 .ball_item[style-angle="0"] {

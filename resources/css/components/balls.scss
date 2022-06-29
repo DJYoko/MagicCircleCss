@@ -43,7 +43,7 @@ $ballSize: 32px;
 
     #colorMode:checked~.magicCircle & {
       box-shadow: 0px 0px 8px color.$itemColorLightRed;
-      background: radial-gradient(color.$itemColorLightRed, color.$itemColorDeepRed);
+      background: radial-gradient(color.$itemColorDeepRed, color.$itemColorLightRed);
     }
 
   }
