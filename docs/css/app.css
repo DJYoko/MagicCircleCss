@@ -20,6 +20,42 @@ body {
   overflow: hidden;
 }
 
+.wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.magicCircle {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  position: relative;
+}
+
+.theCenter {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+  margin-left: -1px;
+  background: #f00;
+  z-index: 10000;
+}
+
+.pageTitle {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
 .resizable {
   width: 100%;
   height: 100%;
@@ -82,6 +118,17 @@ body {
 .is-rotateReverse {
   -webkit-animation-name: rotateReverse;
           animation-name: rotateReverse;
+}
+
+.is-blink {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-name: blink;
+          animation-name: blink;
 }
 
 @-webkit-keyframes rotateBasic {
@@ -273,6 +320,29 @@ body {
           animation-duration: 30s;
 }
 
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .ring {
   position: absolute;
   width: 100%;
@@ -284,7 +354,7 @@ body {
 .ring-border {
   width: 100%;
   height: 100%;
-  border: 4px double #007599;
+  border: 1px solid #007599;
   box-shadow: 0px 0px 8px #09ECF9, 0px 0px 8px inset #09ECF9;
   border-radius: 100%;
   position: relative;
@@ -1396,13 +1466,13 @@ body {
 .borderTriangle {
   width: 100%;
   height: 100%;
-  border-top: 1px solid #007599;
+  border-top: 1px solid #09ECF9;
   position: relative;
   margin-top: 20.0961894323%;
 }
 .borderTriangle:before, .borderTriangle:after {
   content: "";
-  background-color: #007599;
+  background-color: #09ECF9;
   width: 1px;
   display: block;
   height: 86.6025403785%;
@@ -1420,49 +1490,70 @@ body {
   transform-origin: 0% 0%;
 }
 
-.hexagram {
-  position: absolute;
+.hexagram .is-up,
+.hexagram .is-down {
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.is-up,
-.is-down {
-  width: 100%;
-  height: 100%;
-  border-top: 2px solid #007599;
+  border-top: 2px solid #09ECF9;
   position: relative;
   margin-top: 20.0961894323%;
 }
-.is-up:before, .is-up:after,
-.is-down:before,
-.is-down:after {
+.hexagram .is-up:before, .hexagram .is-up:after,
+.hexagram .is-down:before,
+.hexagram .is-down:after {
   content: "";
-  background-color: #007599;
+  background-color: #09ECF9;
   width: 1px;
   display: block;
   height: 86.6025403785%;
   position: absolute;
   top: 0;
 }
-.is-up:before,
-.is-down:before {
+.hexagram .is-up:before,
+.hexagram .is-down:before {
   left: 0;
   transform: skew(30deg);
   transform-origin: 0% 0%;
 }
-.is-up:after,
-.is-down:after {
+.hexagram .is-up:after,
+.hexagram .is-down:after {
   right: 0;
   transform: skew(-30deg);
   transform-origin: 0% 0%;
 }
-
-.is-down {
+.hexagram .is-down {
   transform: rotate(180deg);
   margin-top: -141%;
+}
+
+.hexagon {
+  height: 50%;
+  width: 86.6025403785%;
+  margin: 25% auto;
+  border-left: 1px solid #09ECF9;
+  border-right: 1px solid #09ECF9;
+  position: relative;
+}
+
+.hexagon::before,
+.hexagon::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 1px solid #09ECF9;
+  border-right: 1px solid #09ECF9;
+  z-index: 0;
+}
+
+.hexagon::before {
+  transform: rotate(60deg);
+}
+
+.hexagon::after {
+  transform: rotate(-60deg);
 }
 
 .balls {
@@ -1473,16 +1564,17 @@ body {
 
 .ball_item {
   position: absolute;
-  height: 100%;
+  height: calc(100% + 32px);
   width: 2px;
   transform-origin: 50% 50%;
   left: calc(50% - 1px);
-  top: 0;
+  top: -16px;
 }
 .ball_item:before {
   content: "";
   width: 32px;
   height: 32px;
+  margin-left: -16px;
   box-shadow: 0px 0px 8px #09ECF9;
   display: block;
   background: radial-gradient(#09ECF9, #007599);
@@ -2568,40 +2660,4 @@ body {
 }
 .ball_item[style-angle="359"] {
   transform: rotate(359deg);
-}
-
-.wrapper {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
-
-.magicCircle {
-  width: 640px;
-  height: 640px;
-  margin: auto;
-  position: relative;
-}
-
-.theCenter {
-  width: 2px;
-  height: 2px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -1px;
-  margin-left: -1px;
-  background: #f00;
-  z-index: 10000;
-}
-
-.pageTitle {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: 100%;
-  text-align: center;
 }
