@@ -19,3 +19,41 @@ body {
   text-align: center;
   overflow: hidden;
 }
+
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.magicCircle {
+  width: calc(variables.$baseSize * 4);
+  height: calc(variables.$baseSize * 4);
+  margin: auto;
+  position: relative;
+}
+
+// for develop
+.theCenter {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+  margin-left: -1px;
+  background: #f00;
+  z-index: 10000;
+}
+
+.pageTitle {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}

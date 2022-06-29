@@ -2,47 +2,42 @@
 @use '../foundations/color';
 
 .hexagram {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
 
-.is-up,
-.is-down {
-  width: 100%;
-  height: 100%;
-  border-top: 2px solid color.$itemColorDeepBlue;
-  position: relative;
-  margin-top: calc(75% * 2 - 75% * variables.$rootThree);
+  .is-up,
+  .is-down {
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid color.$itemColorLightBlue;
+    position: relative;
+    margin-top: calc(75% * 2 - 75% * variables.$rootThree);
 
 
-  &:before,
-  &:after {
-    content: '';
-    background-color: color.$itemColorDeepBlue;
-    width: 1px;
-    display: block;
-    height: calc(variables.$rootThree / 2 * 100%);
-    position: absolute;
-    top: 0;
+    &:before,
+    &:after {
+      content: '';
+      background-color: color.$itemColorLightBlue;
+      width: 1px;
+      display: block;
+      height: calc(variables.$rootThree / 2 * 100%);
+      position: absolute;
+      top: 0;
+    }
+
+    &:before {
+      left: 0;
+      transform: skew(30deg);
+      transform-origin: 0% 0%;
+    }
+
+    &:after {
+      right: 0;
+      transform: skew(-30deg);
+      transform-origin: 0% 0%;
+    }
   }
 
-  &:before {
-    left: 0;
-    transform: skew(30deg);
-    transform-origin: 0% 0%;
+  .is-down {
+    transform: rotate(180deg);
+    margin-top: -141%;
   }
-
-  &:after {
-    right: 0;
-    transform: skew(-30deg);
-    transform-origin: 0% 0%;
-  }
-}
-
-.is-down {
-  transform: rotate(180deg);
-  margin-top: -141%;
 }
