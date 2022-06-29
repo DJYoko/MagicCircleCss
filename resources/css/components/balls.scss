@@ -21,6 +21,7 @@ $ballSize: 32px;
     content: '';
     width: calc($ballSize);
     height: calc($ballSize);
+    margin-left: calc(-1 * $ballSize / 2);
     box-shadow: 0px 0px 8px color.$itemColorLightBlue;
 
     display: block;
