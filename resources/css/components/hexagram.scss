@@ -9,10 +9,10 @@
     height: 100%;
     position: relative;
     margin-top: calc(75% * 2 - 75% * variables.$rootThree);
-    border-top: 2px solid color.$itemColorLightBlue;
+    border-top: 1px solid color.$itemColorLightBlue;
 
     #colorMode:checked~.magicCircle & {
-      border-top: 2px solid color.$itemColorLightRed;
+      border-top: 1px solid color.$itemColorLightRed;
     }
 
 
