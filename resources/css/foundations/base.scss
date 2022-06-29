@@ -61,3 +61,16 @@ body {
   width: 100%;
   text-align: center;
 }
+
+.sourceLink {
+
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+
+  a {
+    color: color.$baseWhite;
+  }
+}
