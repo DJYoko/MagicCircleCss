@@ -5,46 +5,13 @@
   left: 0;
   top: 0;
 
-  &.is-resize80 {
-    width: 80%;
-    height: 80%;
-    left: 10%;
-    top: 10%;
-  }
+  @for $i from 1 through 10 {
+    &[resize-scale="#{$i * 10}"] {
+      width: $i * 10%;
+      height: $i * 10%;
+      left: 50% - $i * 5%;
+      top: 50% - $i * 5%;
+    }
 
-  &.is-resize70 {
-    width: 70%;
-    height: 70%;
-    left: 15%;
-    top: 15%;
-  }
-
-
-  &.is-resize60 {
-    width: 60%;
-    height: 60%;
-    left: 20%;
-    top: 20%;
-  }
-
-  &.is-resize50 {
-    width: 50%;
-    height: 50%;
-    left: 25%;
-    top: 25%;
-  }
-
-  &.is-resize40 {
-    width: 40%;
-    height: 40%;
-    left: 30%;
-    top: 30%;
-  }
-
-  &.is-resize20 {
-    width: 20%;
-    height: 20%;
-    left: 40%;
-    top: 40%;
   }
 }
