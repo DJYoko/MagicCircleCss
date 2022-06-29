@@ -1,10 +1,16 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
   background: #111111;
-  padding-top: 16px;
   color: #f1f1f1;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -2564,6 +2570,15 @@ body {
   transform: rotate(359deg);
 }
 
+.wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
 .magicCircle {
   width: 640px;
   height: 640px;
@@ -2581,4 +2596,12 @@ body {
   margin-left: -1px;
   background: #f00;
   z-index: 10000;
+}
+
+.pageTitle {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
 }

@@ -3,11 +3,17 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
   background: color.$bodyBackground;
-  padding-top: calc(variables.$baseSize * 0.1);
   color: color.$baseWhite;
   user-select: none;
   text-align: center;
