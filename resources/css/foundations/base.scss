@@ -39,6 +39,12 @@ body {
   height: calc(variables.$baseSize * 4);
   margin: auto;
   position: relative;
+
+  @media (max-width: 640px) {
+    width: calc(variables.$baseSize * 2);
+    height: calc(variables.$baseSize * 2);
+  }
+
 }
 
 // for develop
