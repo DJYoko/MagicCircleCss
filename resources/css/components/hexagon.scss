@@ -1,0 +1,44 @@
+@use '../foundations/variables';
+@use '../foundations/color';
+
+.hexagon {
+  width: 100%;
+  height: calc(100% / variables.$rootThree);
+  margin-top: calc(50% - 50% / variables.$rootThree);
+  border-left: 1px solid color.$itemColorLightBlue;
+  border-right: 1px solid color.$itemColorLightBlue;
+  position: relative;
+}
+
+.hexagon_cont {
+  height: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hexagon::before,
+.hexagon::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 1px solid color.$itemColorLightBlue;
+  border-right: 1px solid color.$itemColorLightBlue;
+  z-index: 0;
+}
+
+.hexagon::before {
+  transform: rotate(60deg);
+}
+
+.hexagon::after {
+  transform: rotate(-60deg);
+}
