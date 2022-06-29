@@ -3,7 +3,8 @@
   margin: 0;
   padding: 0;
   font-family: serif;
-  transition: all 0.3s;
+  transition-property: border-color color box-shadow background-color;
+  transition-duration: 0.3s;
 }
 
 html,
@@ -91,11 +92,23 @@ body {
   left: 45%;
   top: 45%;
 }
+.resizable[resize-scale="10"] * {
+  transition-delay: 50ms, 50ms, 50ms, 50ms;
+}
+.resizable[resize-scale="10"] *:after, .resizable[resize-scale="10"] *:before {
+  transition-delay: 50ms, 50ms, 50ms, 50ms;
+}
 .resizable[resize-scale="20"] {
   width: 20%;
   height: 20%;
   left: 40%;
   top: 40%;
+}
+.resizable[resize-scale="20"] * {
+  transition-delay: 100ms, 100ms, 100ms, 100ms;
+}
+.resizable[resize-scale="20"] *:after, .resizable[resize-scale="20"] *:before {
+  transition-delay: 100ms, 100ms, 100ms, 100ms;
 }
 .resizable[resize-scale="30"] {
   width: 30%;
@@ -103,11 +116,23 @@ body {
   left: 35%;
   top: 35%;
 }
+.resizable[resize-scale="30"] * {
+  transition-delay: 150ms, 150ms, 150ms, 150ms;
+}
+.resizable[resize-scale="30"] *:after, .resizable[resize-scale="30"] *:before {
+  transition-delay: 150ms, 150ms, 150ms, 150ms;
+}
 .resizable[resize-scale="40"] {
   width: 40%;
   height: 40%;
   left: 30%;
   top: 30%;
+}
+.resizable[resize-scale="40"] * {
+  transition-delay: 200ms, 200ms, 200ms, 200ms;
+}
+.resizable[resize-scale="40"] *:after, .resizable[resize-scale="40"] *:before {
+  transition-delay: 200ms, 200ms, 200ms, 200ms;
 }
 .resizable[resize-scale="50"] {
   width: 50%;
@@ -115,11 +140,23 @@ body {
   left: 25%;
   top: 25%;
 }
+.resizable[resize-scale="50"] * {
+  transition-delay: 250ms, 250ms, 250ms, 250ms;
+}
+.resizable[resize-scale="50"] *:after, .resizable[resize-scale="50"] *:before {
+  transition-delay: 250ms, 250ms, 250ms, 250ms;
+}
 .resizable[resize-scale="60"] {
   width: 60%;
   height: 60%;
   left: 20%;
   top: 20%;
+}
+.resizable[resize-scale="60"] * {
+  transition-delay: 300ms, 300ms, 300ms, 300ms;
+}
+.resizable[resize-scale="60"] *:after, .resizable[resize-scale="60"] *:before {
+  transition-delay: 300ms, 300ms, 300ms, 300ms;
 }
 .resizable[resize-scale="70"] {
   width: 70%;
@@ -127,11 +164,23 @@ body {
   left: 15%;
   top: 15%;
 }
+.resizable[resize-scale="70"] * {
+  transition-delay: 350ms, 350ms, 350ms, 350ms;
+}
+.resizable[resize-scale="70"] *:after, .resizable[resize-scale="70"] *:before {
+  transition-delay: 350ms, 350ms, 350ms, 350ms;
+}
 .resizable[resize-scale="80"] {
   width: 80%;
   height: 80%;
   left: 10%;
   top: 10%;
+}
+.resizable[resize-scale="80"] * {
+  transition-delay: 400ms, 400ms, 400ms, 400ms;
+}
+.resizable[resize-scale="80"] *:after, .resizable[resize-scale="80"] *:before {
+  transition-delay: 400ms, 400ms, 400ms, 400ms;
 }
 .resizable[resize-scale="90"] {
   width: 90%;
@@ -139,11 +188,23 @@ body {
   left: 5%;
   top: 5%;
 }
+.resizable[resize-scale="90"] * {
+  transition-delay: 450ms, 450ms, 450ms, 450ms;
+}
+.resizable[resize-scale="90"] *:after, .resizable[resize-scale="90"] *:before {
+  transition-delay: 450ms, 450ms, 450ms, 450ms;
+}
 .resizable[resize-scale="100"] {
   width: 100%;
   height: 100%;
   left: 0%;
   top: 0%;
+}
+.resizable[resize-scale="100"] * {
+  transition-delay: 500ms, 500ms, 500ms, 500ms;
+}
+.resizable[resize-scale="100"] *:after, .resizable[resize-scale="100"] *:before {
+  transition-delay: 500ms, 500ms, 500ms, 500ms;
 }
 
 .is-rotateBasic,
@@ -1567,11 +1628,11 @@ body {
   height: 100%;
   position: relative;
   margin-top: 20.0961894323%;
-  border-top: 2px solid #09ECF9;
+  border-top: 1px solid #09ECF9;
 }
 #colorMode:checked ~ .magicCircle .hexagram .is-up,
 #colorMode:checked ~ .magicCircle .hexagram .is-down {
-  border-top: 2px solid #a94a78;
+  border-top: 1px solid #a94a78;
 }
 .hexagram .is-up:before, .hexagram .is-up:after,
 .hexagram .is-down:before,
@@ -1673,7 +1734,7 @@ body {
   height: 32px;
   margin-left: -16px;
   box-shadow: 0px 0px 8px #09ECF9;
-  background: radial-gradient(#09ECF9, #007599);
+  background-color: #007599;
 }
 @media (max-width: 640px) {
   .ball_item:before {
@@ -1685,7 +1746,7 @@ body {
 }
 #colorMode:checked ~ .magicCircle .ball_item:before {
   box-shadow: 0px 0px 8px #a94a78;
-  background: radial-gradient(#99004a, #a94a78);
+  background-color: #99004a;
 }
 
 .ball_item[style-angle="0"] {

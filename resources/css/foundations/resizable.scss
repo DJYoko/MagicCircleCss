@@ -11,7 +11,15 @@
       height: $i * 10%;
       left: 50% - $i * 5%;
       top: 50% - $i * 5%;
-    }
 
+      * {
+        transition-delay: $i * 50ms, $i * 50ms, $i * 50ms, $i * 50ms;
+
+        &:after,
+        &:before {
+          transition-delay: $i * 50ms, $i * 50ms, $i * 50ms, $i * 50ms;
+        }
+      }
+    }
   }
 }
