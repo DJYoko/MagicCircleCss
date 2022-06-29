@@ -15,7 +15,7 @@ $ballSize: 32px;
   width: 2px;
   transform-origin: 50% 50%;
   left: calc(50% - 1px);
-  top: 0;
+  top: calc(-1 * $ballSize / 2);
 
   &:before {
     content: '';
