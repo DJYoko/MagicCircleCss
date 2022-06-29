@@ -11,7 +11,7 @@ $ballSize: 32px;
 
 .ball_item {
   position: absolute;
-  height: 100%;
+  height: calc(100% + $ballSize);
   width: 2px;
   transform-origin: 50% 50%;
   left: calc(50% - 1px);
