@@ -13,6 +13,13 @@
   animation-name: rotateReverse;
 }
 
+.is-blink {
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: blink;
+}
+
 
 @keyframes rotateBasic {
   from {
@@ -40,5 +47,21 @@
     &[animation-duration="#{$i}"] {
       animation-duration: ($i * 1s);
     }
+  }
+}
+
+
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
