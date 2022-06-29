@@ -29,6 +29,13 @@
   left: calc(50% - variables.$baseSize * 0.3 * 0.5);
   width: calc(variables.$baseSize * 0.3);
   font-size: calc(variables.$baseSize * 0.3);
+
+  @media (max-width: 640px) {
+    font-size: calc(variables.$baseSize * 0.15);
+    top: -1.5%;
+    height: 103%;
+  }
+
   height: 100%;
   color: color.$itemColorLightBlue;
 }
