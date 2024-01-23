@@ -11,4 +11,4 @@ demo: https://djyoko.github.io/MagicCircleCss/
 - HTML5
 
 ## materials
-- background image [https://unsplash.com/photos/cGNCepznaV8](https://unsplash.com/photos/cGNCepznaV8)
+- background image by Peter Gargiulo [https://unsplash.com/photos/cGNCepznaV8](https://unsplash.com/photos/cGNCepznaV8)
