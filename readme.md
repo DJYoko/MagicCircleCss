@@ -6,9 +6,9 @@ no javascript in running on the demo.
 demo: https://djyoko.github.io/MagicCircleCss/
 
 ## What I Used
-- Laravel-Mix
+- [VITE](https://vitejs.dev/)
 - SCSS
 - HTML5
 
 ## materials
-- background image [https://unsplash.com/photos/cGNCepznaV8](https://unsplash.com/photos/cGNCepznaV8)
+- background image by Peter Gargiulo [https://unsplash.com/photos/cGNCepznaV8](https://unsplash.com/photos/cGNCepznaV8)

@@ -5,7 +5,6 @@ export default defineConfig({
     extensions: ['.scss'],
   },
   base: './',
-  publicDir: 'docs',
   build: {
     outDir: './docs',
     assetsDir: './resources',
