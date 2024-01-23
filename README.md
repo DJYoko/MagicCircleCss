@@ -6,7 +6,7 @@ no javascript in running on the demo.
 demo: https://djyoko.github.io/MagicCircleCss/
 
 ## What I Used
-- [https://vitejs.dev/](VITE)
+- [VITE](https://vitejs.dev/)
 - SCSS
 - HTML5
 
