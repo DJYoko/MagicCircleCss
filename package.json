@@ -25,6 +25,6 @@
   "homepage": "https://github.com/DJYoko/MagicCircleCss#readme",
   "devDependencies": {
     "sass": "^1.70.0",
-    "vite": "^5.1.8"
+    "vite": "^6.3.5"
   }
 }
